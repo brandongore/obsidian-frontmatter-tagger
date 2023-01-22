@@ -1,0 +1,10 @@
+{
+  "id": "frontmatter-tagger",
+  "name": "Frontmatter Tagger",
+  "version": "0.0.1",
+  "description": "Add frontmatter with chosen tags",
+  "author": "Stephen Solka, Brandon Gore",
+  "authorUrl": "https://github.com/trashhalo, https://github.com/brandongore",
+  "isDesktopOnly": false,
+  "minAppVersion": "0.12.15"
+}

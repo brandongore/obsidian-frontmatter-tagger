@@ -1,0 +1,21 @@
+{
+  "name": "obsidian-frontmatter-tagger",
+  "version": "0.0.1",
+  "description": "Add frontmatter with chosen tags",
+  "main": "main.js",
+  "scripts": {
+    "esbuild-dev": "esbuild index.js --platform=node --external:obsidian --external:electron --loader:.wasm=base64 --bundle --outfile=main.js",
+    "esbuild-release": "esbuild index.js --platform=node --external:obsidian --external:electron --loader:.wasm=base64 --bundle --outfile=main.js --minify",
+    "build": "set RUSTFLAGS=--cfg=web_sys_unstable_apis && wasm-pack build --target web && npm run esbuild-release",
+    "dev": "set RUSTFLAGS=--cfg=web_sys_unstable_apis && wasm-pack build --dev --target web && npm run esbuild-dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "GPL",
+  "devDependencies": {
+    "esbuild": "^0.12.25"
+  },
+  "dependencies": {
+    "hasbin": "^1.2.3"
+  }
+}
